@@ -1,0 +1,11 @@
+<form action="">
+  <label for="">Type:</label>
+  {{view Ember.Select content=sources value=source}}
+  <br/><br/>
+  <label for="">Volume:</label>
+  {{input type='range' value=volume class='topcoat-range' min='0' max='1' step='0.01'}}
+  <br/><br/>
+  <label for="">Pitch:</label>
+  {{view Ember.Select content=pitches value=pitch selection=pitchAndNote optionValuePath='content.freq' optionLabelPath='content.note'}}
+  <hr/>
+</form>

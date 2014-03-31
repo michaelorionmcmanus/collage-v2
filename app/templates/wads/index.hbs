@@ -1,0 +1,10 @@
+<button class="topcoat-button--large--cta" {{action 'new'}}>New Wad</button>
+
+<ul>
+  {{#each wad in model itemController='wads/list-item'}}
+    <li>{{wad.note}} <button class="topcoat-button" {{action 'play' wad}}>Play Once</button>
+    | <button class="topcoat-button" {{action 'loop' wad}}>Loop</button>
+    | <button class="topcoat-button" {{action 'stop' wad}}>Stop</button>
+    | <button class="topcoat-button" {{action 'edit' wad}}>Adjust</button></li>
+  {{/each}}
+</ul>
